@@ -249,7 +249,9 @@
 
         spans.forEach(span => {
           span.textContent = ''
-          span.classList.remove(this.direction)
+          
+          if(span.classList.contains(this.direction))
+           span.classList.remove(this.direction)
         })
 
         this.header.removeChild(this.button)
